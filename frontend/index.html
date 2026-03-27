@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popularidad de Nombres Argentina</title>
+    <script src="https://cdn.plot.ly/plotly-2.34.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Popularidad de tu nombre en Argentina</h1>
+        <h2>Descubri cuantas personas se llamaron como vos en los ultimos 100 años</h2>
+        
+        <form class ="search-box" id="searchFrom">
+                <input id="input" type="text" placeholder="Escribí un nombre">
+                <button id="buscarBtn" type="submit">Buscar</button>
+        </form>
+
+        <p>Aclaración: Cada nombre propio esta registrado de forma individual. Es decir si una persona tiene dos nombres o mas se cuenta cada un de ellos por separado.</p>
+
+        <div id="graficoContainer">
+            <p id="placeholderText">Escribe un nombre arriba y haz clic en "Buscar" para ver su historia.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
