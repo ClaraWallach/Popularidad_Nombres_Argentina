@@ -47,7 +47,7 @@ En la carpeta data descargar los datasets:
 &#x09;nombres 1922- 2015 https://www.datos.gob.ar/dataset/otros-nombres-personas-fisicas 
 
 &#x09;nombres 2012-2024 https://www.datos.gob.ar/dataset/renaper-nombres-propios-argentina
-	nacimientos:  https://datos.salud.gob.ar/dataset/serie-historica-de-nacimientos-ocurridos-en-argentina-por-jurisdiccion/archivo/95cfbd36- d912-46a4-9dfa-213e4bdbdc53
+	nacimientos:  https://datos.salud.gob.ar/dataset/serie-historica-de-nacimientos-ocurridos-en-argentina-por-jurisdiccion/archivo/95cfbd36-d912-46a4-9dfa-213e4bdbdc53
 
 
 
