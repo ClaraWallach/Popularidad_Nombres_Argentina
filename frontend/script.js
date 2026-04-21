@@ -5,7 +5,10 @@ boton = document.getElementById("searchFrom").addEventListener("submit", async f
     const nombreInput = document.querySelector("input").value.trim()
     n = normalizar(nombreInput);
 
-    const url = `http://localhost:8000/nombre/${nombreInput}`;
+    // para correr localmente usar url = `http://localhost:8000/nombre/${nombreInput}`;
+
+    // utilizo la url de la pagina desplegada modificar para correr localmente
+    const url = `https://mi-api-207417748731.us-central1.run.app/nombre/${nombreInput}`;
 
     data = await getData(url)
     if (data && data.anio){

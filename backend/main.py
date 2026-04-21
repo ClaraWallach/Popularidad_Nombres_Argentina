@@ -1,4 +1,4 @@
-from backend import funciones
+import funciones
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -15,7 +15,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"], # Permite GET, POST, etc.
+    allow_methods=["GET"], 
     allow_headers=["*"], # Permite todos los encabezados
 )
 
@@ -23,15 +23,36 @@ app.add_middleware(
 # %%
 def conexion():
     try:
+    #Obtenemos los valores de las variables de entorno
+        db_host = config("mysql_host")
+        db_user = config("mysql_user")
+        db_pass = config("mysql_password")
+        db_name = config("mysql_database")
+        db_port = config("mysql_port", default="3306")
+
+    #Preparamos la configuración base (igual para local y web)
         conf = {
-            "host": config("mysql_host"),
-            "port": config("mysql_port"),
-            "database": config("mysql_database"),
-            "user": config("mysql_user"),
-            "password": config("mysql_password")}
-    
-        conection = mysql.connector.connect(**conf)
-        return conection 
+            "user": db_user,
+            "password": db_pass,
+            "database": db_name
+        }
+    #Si el host empieza con /cloudsql/ lo estoy desplegando entonces necesito usar unix_socket
+        if "/cloudsql/" in db_host:
+            socket_path = db_host 
+            conf["unix_socket"] = socket_path
+
+
+    #Para conectar con la bd de manera local 
+        else: 
+            #agrego al diccionario host y port que solo hay que mandar si se esta usando local
+            conf["host"] = db_host
+            conf["port"] = db_port
+
+
+        #Conectamos usando el diccionario desempaquetado
+        connection = mysql.connector.connect(**conf)
+        return connection
+
     except Error as e:
         print(f"Error al conectar a MySQL: {e}")
         return None
@@ -53,5 +74,3 @@ async def nombre(busqueda: str):
         cursor.close()
         con.close()
   
-
-
