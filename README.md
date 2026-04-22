@@ -10,14 +10,14 @@ INDICE:
 4. [Estructura de los archivos](#estructura-de-los-archivos)
 5. [Instalación y configuración](#instalación-y-configuración)
 
-## Descripcion general
+## Descripción general
 Este proyecto premite ver la popularidad de un nombre propio en Argentina entre 1922 y 1924. El usuario puedo consultar un nombre y obtener un grafico con el porcentaje sobre el total de nacimientos por año y la cantidad absoluta de nacimientos por año con el nombre buscado. 
 
 Los datos utilizados son de datos.gob.ar  Los datos fueron procesados, limpiados y almacenados en una base de datos MySQL que es consultada a través de una API. Luego desplegue el proyecto en google cloud para que pueda ser consultado desde la web.
 
 <img width="1789" height="686" alt="image" src="https://github.com/user-attachments/assets/d58c9beb-d506-47b4-9eec-183ae4eff207" />
 
-## Proceso de realizacion
+## Proceso de realización
 **Limpieza y normalizacion de datos**
 Para realizar la app use dos datasets con la información sobre los nombres; uno con datos entre 1922 y 2015 y otro con datos entre 2012 y 2024. Los archivos tienen algunas diferencias ya que el primero tiene los nombres cargados de forma completa (“Juan Martin”) y el segundo de manera individual (“Juan”, “Martin”). Por lo tanto dividí los nombres del primer conjunto de datos para que las búsquedas sean siempre por el nombre individual. Luego tuve que limpiar errores en la codificación de algunas letras, nombres repetidos o distintas inconsistencias.
 
