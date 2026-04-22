@@ -81,5 +81,9 @@ function grafico(d,nombre){
     Plotly.newPlot('graficoContainer', data, layout);
 };
 
-
-    
+function datos(data, nombre){
+    cantidad_total 
+    maxima
+    año_maxima 
+    porcentaje_maxima 
+}
