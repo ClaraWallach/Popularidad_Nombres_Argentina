@@ -1,5 +1,18 @@
+
+# --- Python & Virtual Environments ---
 .env
 .venv/
 **/__pycache__/
+*.pyc
+
+# --- Datos y Base de Datos---
 *.sql
 data/
+
+# --- Firebase ---
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+*.local
+

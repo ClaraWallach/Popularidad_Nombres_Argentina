@@ -9,7 +9,14 @@ from decouple import config
 app = FastAPI()
 
 # Definimos quién tiene permiso para entrar (en este caso defino todos)
-origins = ["*"]
+origins = origins = [
+    # URL del sitio desplegado en firebase
+    "https://popularidad-nombres-argentina.web.app",
+    "https://popularidad-nombres-argentina.firebaseapp.com",
+    
+    #Entorno local (si lo estas corriendo localmente con otro puerto agregar o utilizar * para que cualquiera pueda utilizar)
+    "http://localhost:8080",
+]
 
 app.add_middleware(
     CORSMiddleware,

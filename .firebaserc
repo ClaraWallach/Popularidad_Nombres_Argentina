@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "project-ecddc633-9aa9-4280-8d4"
+  },
+  "targets": {
+    "project-ecddc633-9aa9-4280-8d4": {
+      "hosting": {
+        "app": [
+          "popularidad-nombres-argentina"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
