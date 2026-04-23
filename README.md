@@ -1,4 +1,4 @@
-#Popularidad de nombres en Argentina (1922-2024)
+##Popularidad de nombres en Argentina (1922-2024)
 Visualización interactiva de la popularidad de un nombre propio en Argentina 
 
 LINK DEL PROYECTO: https://popularidad-nombres-argentina.web.app
@@ -11,7 +11,7 @@ INDICE:
 5. [Instalación y configuración](#instalación-y-configuración)
 
 ## Descripción general
-Este proyecto premite ver la popularidad de un nombre propio en Argentina entre 1922 y 1924. El usuario puedo consultar un nombre y obtener un grafico con el porcentaje sobre el total de nacimientos por año y la cantidad absoluta de nacimientos por año con el nombre buscado. 
+Este proyecto premite ver la popularidad de un nombre propio en Argentina entre 1922 y 2024. El usuario puedo consultar un nombre y obtener un grafico con el porcentaje sobre el total de nacimientos por año y la cantidad absoluta de nacimientos por año con el nombre buscado. 
 
 Los datos utilizados son de datos.gob.ar  Los datos fueron procesados, limpiados y almacenados en una base de datos MySQL que es consultada a través de una API. Luego desplegue el proyecto en google cloud para que pueda ser consultado desde la web.
 
