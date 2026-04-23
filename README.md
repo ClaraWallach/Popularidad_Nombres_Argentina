@@ -15,7 +15,7 @@ Este proyecto premite ver la popularidad de un nombre propio en Argentina entre 
 
 Los datos utilizados son de datos.gob.ar  Los datos fueron procesados, limpiados y almacenados en una base de datos MySQL que es consultada a través de una API. Luego desplegue el proyecto en google cloud para que pueda ser consultado desde la web.
 
-<img width="1789" height="686" alt="image" src="https://github.com/user-attachments/assets/d58c9beb-d506-47b4-9eec-183ae4eff207" />
+<img width="1800" height="776" alt="image" src="https://github.com/user-attachments/assets/9f1c3218-8c5b-429c-bca5-10795f7b2ba2" />
 
 ## Proceso de realización
 **Limpieza y normalizacion de datos**
