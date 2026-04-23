@@ -38,26 +38,26 @@ En el front end el gráfico es realizado con plotly.js para la pagina web. En el
 - Contendores: Docker
 
 ## Estructura de los archivos 
-├── backend/
-│   ├── dockerfile          # Configuración del contenedor
-│   ├── funciones.py        # Lógica de conexión y consultas
-│   ├── main.py             # Endpoints de FastAPI
-│   └── requirements.txt    # Dependencias del backend
-├── data/
-│   ├── nacimientos_completos.csv
-│   ├── nombres_argentina.csv
-│   └── datos originales/   # Datasets crudos de fuentes oficiales
-├── frontend/
-│   ├── 404.html
-│   ├── index.html
-│   ├── scripts.js          # Lógica de consumo de API y Plotly
-│   └── style.css
-├── scripts/
-│   ├── limpieza.py         # Procesamiento de CSVs originales
-│   └── setup_db.py         # Creación de tablas y carga de datos
-├── extras_backend.py       # Utilidades adicionales y testeo de gráficos
-├── requirements.txt        # Dependencias generales del proyecto
-└── .envexample             # Plantilla para variables de entorno
+backend/
+    dockerfile          (Configuración del contenedor)
+    funciones.py  (Lógica de conexión y consultas)
+    main.py             (Endpoints de FastAPI)
+    requirements.txt    (Dependencias del backend)
+data/
+    nacimientos_completos.csv
+    nombres_argentina.csv
+    datos originales/   (Datasets crudos de fuentes oficiales)
+frontend/
+    404.html
+    index.html
+    scripts.js          (Lógica de consumo de API y Plotly)
+    style.css
+scripts/
+    limpieza.py         (Procesamiento de CSVs originales)
+    setup_db.py         (Creación de tablas y carga de datos) 
+extras_backend.py       (Graficos en python)
+requirements.txt        (Dependencias generales del proyecto)
+.envexample             (Plantilla para variables de entorno)
 
 
 ## Instalación y configuración
