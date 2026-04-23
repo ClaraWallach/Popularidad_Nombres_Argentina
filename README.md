@@ -37,28 +37,30 @@ En el front end el gráfico es realizado con plotly.js para la pagina web. En el
 - Infraestructura: Google Cloud Plataform (Cloud Run, Cloud SQL y Firebase Hosting)
 - Contendores: Docker
 
-## Estructura de los archivos 
-backend/
-    dockerfile          (Configuración del contenedor)
-    funciones.py  (Lógica de conexión y consultas)
-    main.py             (Endpoints de FastAPI)
-    requirements.txt    (Dependencias del backend)
-data/
-    nacimientos_completos.csv
-    nombres_argentina.csv
-    datos originales/   (Datasets crudos de fuentes oficiales)
-frontend/
-    404.html
-    index.html
-    scripts.js          (Lógica de consumo de API y Plotly)
-    style.css
-scripts/
-    limpieza.py         (Procesamiento de CSVs originales)
-    setup_db.py         (Creación de tablas y carga de datos) 
-extras_backend.py       (Graficos en python)
-requirements.txt        (Dependencias generales del proyecto)
-.envexample             (Plantilla para variables de entorno)
-
+## Estructura de los archivos
+```
+.
+├── backend/
+│   ├── main.py                   #API y conexión con base de datos
+│   ├── funciones.py        
+│   ├── dockerfile                #Configuración del contenodor para Google Cloud Run     
+│   └── requirements.txt    
+├── data/                   
+│   ├── nacimientos_completos.csv #Datos generados luego de la limpieza y normalización de los datos originales
+│   ├── nombres_argentina.csv     #Datos generados luego de la limpieza y normalización de los datos originales
+│   └── datos originales/         # Datasets crudos
+├── frontend/
+│   ├── 404.html           
+│   ├── index.html          
+│   ├── scripts.js               # Lógica de consumo de API y realización de grafico Plotly
+│   └── style.css           
+├── scripts/
+│   ├── limpieza.py              # Limpieza y normalización de CSVs
+│   └── setup_db.py              # Creación de esquema MySQL y carga de datos
+├── .envexample             
+├── extras_backend.py            # Realización de graficos en python
+└── requirements.txt     
+```
 
 ## Instalación y configuración
 La explicación de la instalación es para poder utilizarlo localmente, no se detalla el despliegue en la web 
