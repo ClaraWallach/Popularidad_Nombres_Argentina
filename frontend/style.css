@@ -74,6 +74,13 @@ h2 {
 #placeholderText {
     color: #999;
 }
+
+
+img {
+    width: 50px; 
+    height: 50px;
+}
+
 /* Estilo de aviso para girar celular Oculto por defecto */
 #orientation-overlay {
     display: none;
